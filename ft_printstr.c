@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printchar.c                                     :+:      :+:    :+:   */
+/*   ft_printstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 14:00:28 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/25 14:46:53 by tmongell         ###   ########.fr       */
+/*   Created: 2021/11/25 14:43:51 by tmongell          #+#    #+#             */
+/*   Updated: 2021/11/25 14:45:03 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_printf.h"
+#include"lib_printf.h"
 
-int	ft_printchar(int c)
+int	ft_printstr(char *str)
 {
-	return (write(1, &c, 1));
+	return (write(1, str, ft_strlen(str)));
 }
