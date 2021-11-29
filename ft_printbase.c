@@ -6,11 +6,19 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:53:48 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/29 13:30:34 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:32:17 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib_printf.h"
+
+static void	ft_swap(int	*a, int *b)
+{
+	*a = *a + *b;
+	*b = *a - *b;
+	*a = *a - *b;
+}
+
 //get the nb of digit of the number, when the number is in the given base
 static size_t	ft_nblen(long unsigned int nb, size_t basesize)
 {
