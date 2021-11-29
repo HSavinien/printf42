@@ -5,12 +5,9 @@ SRCS		=	ft_printf.c \
 				ft_printptr.c \
 				ft_printnbr.c \
 				ft_printbase.c \
-
-LIBFT		=	./libft/
+				ft_strlen.c \
 
 OBJS		=	${SRCS:.c=.o}
-
-LIBFTOBJS	= ${LIBFT}/libft.a
 
 CC			= gcc
 
@@ -21,22 +18,22 @@ NAME		= libftprintf.a
 #rules
 
 ${NAME}:	${OBJS}
-		make -C ${LIBFT} all
-		ar rcs ${NAME} ${OBJS} ${LIBFTOBJS}
+		ar rcs ${NAME} ${OBJS}
 
 all:		${NAME}
 
 clean:
-		make -C ${LIBFT} clean
 		rm -f ${OBJS}
 
 fclean:		clean
-		make -C ${LIBFT} fclean
 		rm -f ${NAME}
 
 re:			fclean all
 
 bonus:
 		echo "no additionnal file to compile for bonus"
+
+testing:	all
+		@${CC} ${CFLAGS} ${NAME} ${LIBFTOBJS} testing.c -o test
 
 .PHONY: all clean fclean re

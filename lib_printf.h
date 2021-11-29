@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:55:27 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/29 17:52:00 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:08:44 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "./libft/libft.h"
+# include <string.h>
 
 //main functions
 int		ft_handle_format(char form, va_list ap);
@@ -29,4 +29,5 @@ int		ft_printbase(long unsigned int nb, char *base);
 //bonus format function
 
 //subfunction (used by the others)
+size_t	ft_strlen(const char *s);
 #endif
