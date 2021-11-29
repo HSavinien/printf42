@@ -10,6 +10,8 @@ LIBFT		=	./libft/
 
 OBJS		=	${SRCS:.c=.o}
 
+LIBFTOBJS	= ${LIBFT}/libft.a
+
 CC			= gcc
 
 CFLAGS		= -Wall -Werror -Wextra
@@ -20,7 +22,7 @@ NAME		= libftprintf.a
 
 ${NAME}:	${OBJS}
 		make -C ${LIBFT} all
-		ar rcs ${NAME} ${OBJS} ${LIBFT}libft.a
+		ar rcs ${NAME} ${OBJS} ${LIBFTOBJS}
 
 all:		${NAME}
 
