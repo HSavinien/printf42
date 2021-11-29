@@ -20,7 +20,7 @@ NAME		= libftprintf.a
 
 ${NAME}:	${OBJS}
 		make -C ${LIBFT} all
-		ar rcs ${NAME} ${OBJS} ${LIBFT}
+		ar rcs ${NAME} ${OBJS} ${LIBFT}libft.a
 
 all:		${NAME}
 
