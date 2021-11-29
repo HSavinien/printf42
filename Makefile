@@ -33,7 +33,4 @@ re:			fclean all
 bonus:
 		echo "no additionnal file to compile for bonus"
 
-testing:	all clean
-		@${CC} ${CFLAGS} ${NAME} testing.c -o test
-
 .PHONY: all clean fclean re
