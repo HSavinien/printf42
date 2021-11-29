@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:48:45 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/25 18:27:48 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:17:50 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,11 @@ int	ft_printf(const char *str, ...)
 			retvalue += ft_retvalue(ft_handle_format(str[i], ap), &error);
 		}
 		else
+		{
 			write(1, &str[i], 1);
+			retvalue ++;
+		}
 		i ++;
-		retvalue ++;
 	}
 	va_end(ap);
 	return (retvalue * error);
