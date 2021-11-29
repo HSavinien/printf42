@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 14:43:51 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/29 20:19:21 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 20:47:53 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int	ft_printstr(char *str)
 {
 	if (!str)
-		return (-1);
+		return (write(1, "(null)", 6));
 	return (write(1, str, ft_strlen(str)));
 }
