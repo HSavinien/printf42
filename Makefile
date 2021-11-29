@@ -6,9 +6,9 @@ SRCS		=	ft_printf.c \
 				ft_printnbr.c \
 				ft_printbase.c \
 
-OBJS		=	${SRCS:.c=.o}
+LIBFT		=	./libft
 
-DEPENDENCY	= libft.a
+OBJS		=	${SRCS:.c=.o}
 
 CC			= gcc
 
@@ -19,14 +19,17 @@ NAME		= libftprintf.a
 #rules
 
 ${NAME}:	${OBJS}
+		make -C ${LIBFT} all
 		ar rcs ${NAME} ${OBJS}
 
 all:		${NAME}
 
 clean:
+		make -C ${LIBFT} clean
 		rm -f ${OBJS}
 
 fclean:		clean
+		make -C ${LIBFT} fclean
 		rm -f ${NAME}
 
 re:			fclean all

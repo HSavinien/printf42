@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:55:27 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/29 15:34:41 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:25:08 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include "libft.h"
+# include "./libft/libft.h"
 
 //main functions
 int		ft_handle_format(char form, va_list ap);
