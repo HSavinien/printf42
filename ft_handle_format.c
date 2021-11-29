@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/24 19:44:43 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/29 20:38:27 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 21:31:00 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ int	ft_handle_format(char form, va_list ap)
 	else if (form == 'i' || form == 'd')
 		return (ft_printnbr(va_arg(ap, int)));
 	else if (form == 'u')
-		return (ft_printbase(va_arg(ap, unsigned long int), "0123456789"));
+		return (ft_printbase(va_arg(ap, unsigned int), "0123456789"));
 	else if (form == 'x')
-		return (ft_printbase(va_arg(ap, unsigned long int), "0123456789abcdef"));
+		return (ft_printbase(va_arg(ap, unsigned int), "0123456789abcdef"));
 	else if (form == 'X')
-		return (ft_printbase(va_arg(ap, unsigned long int), "0123456789ABCDEF"));
+		return (ft_printbase(va_arg(ap, unsigned int), "0123456789ABCDEF"));
 	else
 		return (-1);
 }
