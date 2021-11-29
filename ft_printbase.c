@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/25 16:53:48 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/29 15:32:17 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 17:09:00 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ static size_t	ft_nblen(long unsigned int nb, size_t basesize)
 	}
 	return (len);
 }
+
 // invert the order of the digit in an int array, because ft_get_digit put them
 // in the wrong order
 void	ft_rev_int_tab(int *tab, int size)
@@ -50,11 +51,12 @@ void	ft_rev_int_tab(int *tab, int size)
 		pos2 --;
 	}
 }
+
 //transform a number in the string of digit to represente this nb in base. digit
 //are the value of each digit, not the char symbolising them
 static int	*ft_get_digits(long unsigned int nb, size_t basesize, size_t len)
 {
-	int	*digits;
+	int		*digits;
 	size_t	i;
 
 	digits = malloc(sizeof (int) * len);
@@ -73,6 +75,7 @@ static int	*ft_get_digits(long unsigned int nb, size_t basesize, size_t len)
 	ft_rev_int_tab(digits, len);
 	return (digits);
 }
+
 //get a number, get a base, display the number in the base. in case of error,
 //return a negative nb. else, return the nb of char printed.
 //the function does not handle negative number
@@ -84,7 +87,7 @@ int	ft_printbase(long unsigned int nb, char *base)
 	size_t	nblen;
 
 	if (!base || !*base || !base[1])
-		return(-10);
+		return (-10);
 	basesize = ft_strlen(base);
 	nblen = ft_nblen(nb, basesize);
 	digits = ft_get_digits(nb, basesize, nblen);
