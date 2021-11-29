@@ -6,7 +6,7 @@
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/23 17:55:27 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/25 14:43:16 by tmongell         ###   ########.fr       */
+/*   Updated: 2021/11/29 15:34:41 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,15 @@
 # include "libft.h"
 
 //main functions
-int	ft_handle_format(char form, va_list ap);
-int	ft_printf(const char *str, ...);
+int		ft_handle_format(char form, va_list ap);
+int		ft_printf(const char *str, ...);
 //format functions
-int	ft_printchar(int c);
-int	ft_printstr(char *str);
-int	ft_printptr(void *ptr);
-int	ft_printnbr(int nb);
-int	ft_printfloat(double nb);
-int	ft_printunb(unsigned int nb);
-int	ft_printhexa(int nb, int form);//lowercase if %x, uppercase if %X
+int		ft_printchar(int c);
+int		ft_printstr(char *str);
+int		ft_printptr(void *ptr);
+int		ft_printnbr(long int nb);
+int		ft_printbase(long unsigned int nb, char *base);
 //bonus format function
 
 //subfunction (used by the others)
-
 #endif

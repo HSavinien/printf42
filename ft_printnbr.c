@@ -1,19 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printptr.c                                      :+:      :+:    :+:   */
+/*   ft_printnbr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tmongell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/25 14:49:24 by tmongell          #+#    #+#             */
-/*   Updated: 2021/11/25 18:25:50 by tmongell         ###   ########.fr       */
+/*   Created: 2021/11/25 19:14:41 by tmongell          #+#    #+#             */
+/*   Updated: 2021/11/29 15:28:10 by tmongell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"lib_printf.h"
+#include "lib_printf.h"
 
-int	ft_printptr(void *ptr)
+int	ft_handlesign(long int *nb)
 {
-	write(1, "0x", 2);
-	return (2 + ft_printbase((unsigned long int)ptr, "0123456789abcdef"));
+	if (*nb < 0)
+	{
+		write(1, "-", 1);
+		*nb *= -1;
+		return (1);
+	}
+
+	return (0);
+}
+
+int	ft_printnbr(long int nb)
+{
+	int	retval;
+
+	retval = 0;
+	retval += ft_handlesign(&nb);
+	retval += ft_printbase(nb, "0123456789");
+	return (retval);
 }
