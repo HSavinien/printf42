@@ -30,7 +30,4 @@ fclean:		clean
 
 re:			fclean all
 
-bonus:
-		echo "no additionnal file to compile for bonus"
-
 .PHONY: all clean fclean re
